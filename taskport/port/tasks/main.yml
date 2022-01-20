@@ -1,0 +1,13 @@
+---
+# tasks file for port
+- name: Web Access Firewall rule
+  firewalld:
+    zone: public
+    port: 587/tcp
+    permanent: yes
+    state: enabled
+
+- name: Reload Firewalld service
+  service:
+    name: firewalld
+    state: restarted

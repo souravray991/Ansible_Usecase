@@ -1,0 +1,6 @@
+---
+- name: Firewalld Rules
+  hosts: localhost
+  become: yes
+  roles:
+   - port
