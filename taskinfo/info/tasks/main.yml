@@ -1,0 +1,13 @@
+---
+# tasks file for info
+
+- name: Finding uptime
+  shell: uptime
+  register: uptime
+- debug:
+    var: up_time.stdout_lines
+- name: Finding RAM info
+  shell: free -m
+  register: ram_info
+- debug:
+    var: ram_info.stdout_lines
